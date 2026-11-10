@@ -2,42 +2,45 @@
 // Built-in Utility Types Practice
 // ------------------------------------------
 
-// 1. Partial
-// Use Partial to make all properties in the User type optional.
+// 1. Make all properties optional
 
 type User = {
-  id: number;
-  name: string;
-  email: string;
+	id: number;
+	name: string;
+	email: string;
 };
 
-// TODO: Create a variable `draftUser` of type Partial<User>
+// TODO:
+// Use a built-in utility to make a type where all properties in the User type are optional.
+// Create a variable `draftUser` of this new type
 // and assign only one property to it.
 
 // const draftUser: ??? = { name: "Draft" };
 
-// 2. Required
-// Use Required to make sure all fields are required.
+// 2. Make all fields required
 
 type Settings = {
-  darkMode?: boolean;
-  fontSize?: number;
+	darkMode?: boolean;
+	fontSize?: number;
 };
 
-// TODO: Create a variable `strictSettings` of type Required<Settings>
+// TODO:
+// Use a built-in utility to make sure all fields are required.
+//  Create a variable `strictSettings` of this new type
 // and provide all the properties.
 
 // const strictSettings: ??? = { darkMode: true, fontSize: 16 };
 
-// 3. Readonly
-// Make a Book object that cannot be edited after creation.
+// 3. Make an object immutable
 
 type Book = {
-  title: string;
-  author: string;
+	title: string;
+	author: string;
 };
 
-// TODO: Use Readonly<Book> to make the book immutable.
+// TODO:
+// Make a Book object that cannot be edited after creation.
+// Use a built-in utility to make the book immutable.
 // Try changing a property and see the error.
 
 // const book: ??? = { title: "1984", author: "George Orwell" };
@@ -47,32 +50,35 @@ type Book = {
 // You’re building a key-value map of scores per user.
 // Keys are usernames (string), values are numbers.
 
-// TODO: Use Record<string, number> to type this object
+// TODO:
+// Use the Record built-in utility to type this object
 
 // const scores: ??? = {
 //   alice: 42,
 //   bob: 36
 // };
 
-// 5. Pick
-// Pick only the name and email from the User type.
+// 5. Create a new type with only the specified keys
 
 type Contact = {
-  id: number;
-  name: string;
-  email: string;
-  phone: string;
+	id: number;
+	name: string;
+	email: string;
+	phone: string;
 };
 
-// TODO: Create a type ContactInfo using Pick
+// TODO:
+// Create a type ContactInfo using a built-in utility
+// Pick only the name and email from the User type.
 // Then create a variable `contactInfo` with only those props.
 
 // const contactInfo: ??? = { name: "Grace", email: "grace@example.com" };
 
-// 6. Omit
-// Now do the reverse: remove the phone from Contact.
+// 6. Remove specified keys from a type
 
-// TODO: Create a type ContactNoPhone using Omit
+// TODO:
+// Now do the reverse: remove the phone from Contact.
+// Create a type ContactNoPhone using Omit
 // Then try assigning a variable with a `phone` property and see the error.
 
 // const contactNoPhone: ??? = {
